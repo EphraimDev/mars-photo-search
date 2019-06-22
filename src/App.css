@@ -2,32 +2,84 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+section h4 {
+  color: #ff7f00
 }
 
-.App-header {
-  background-color: #282c34;
+.mars-container{
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 15px;
+  margin-top: -10px
 }
 
-.App-link {
-  color: #61dafb;
+.wrap-mars{
+  width: 520px;
+  min-width: 520px;
+  background: #21d4fd;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 33px 55px 33px 55px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mars-form{
+  width: 100%
 }
+
+.mars-btn{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+}
+.wrap-btn{
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto
+}
+.mars-btn-wrap{
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #ff8c1b;
+  top: 0;
+  left: -100%;
+  transition: all 0.4s;
+}
+
+.mars-btn-wrap:hover{
+  background-color: #21d4fd !important
+}
+.mars-form-btn{
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  outline: none !important;
+  border: none;
+  background: transparent
+}
+
+.card-image{
+  float: left;
+  margin-bottom: 30px
+}
+
+
+
