@@ -43,7 +43,8 @@ class App extends React.Component{
         document.getElementById("spinner").style.display = "none";
         return validate
     }else{
-        const photoSearch = await Axios.get(`http://localhost:5000/api/v1/search?sol=${data.sol}&camera=${data.camera}`);
+      console.log(data.camera)
+        const photoSearch = await Axios.get(`https://larastart-eph.herokuapp.com/api/v1/search?sol=${data.sol}&camera=${data.camera}`);
         
         if(photoSearch.status === 200){
           document.getElementById("spinner").style.display = "none";
@@ -111,7 +112,7 @@ class App extends React.Component{
             <Label for="camera" sm={3}>Camera</Label>
             <Col sm={9}>
               <Input type="select" name="camera" id="camera" onChange={evt => this.handleChange(evt)}>
-                <option defaultValue></option>
+                <option defaultValue>Select a camera</option>
                 <option value="FHAZ">Front Hazard Avoidance Camera</option>
                 <option value="RHAZ">Rear Hazard Avoidance Camera</option>
                 <option value="MAST">Mast Camera</option>
@@ -127,7 +128,7 @@ class App extends React.Component{
           <FormGroup className="mars-btn">
             <Col sm={{ size: 10, offset: 2 }} className="wrap-btn">
               <div className="mars-btn-wrap"></div>
-              <button className="mars-form-btn" onClick={e => this.onSubmit(e)}>Submit</button>
+              <button className="mars-form-btn" onClick={e => this.onSubmit(e)}>Find Photos</button>
             </Col>
           </FormGroup>
         </Form>
